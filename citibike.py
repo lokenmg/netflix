@@ -22,6 +22,7 @@ data = load_data(500)
 data_load_state.text("Done! (using st.cache)")
 
 st.sidebar.title("Rodrigo Mencias Gonzalez")
+st.sidebar.title("zs20006748@estudiantes.uv.mx")
 st.sidebar.title("zs20006748")
 st.sidebar.image("logo.jpg")
 st.sidebar.title("Opciones:")
@@ -38,7 +39,7 @@ if st.sidebar.checkbox('Recorridos por hora'):
 
 
 # Some number in the range 0-23
-hour_to_filter = st.slider('hour', 0, 23, 17)
+hour_to_filter = st.sidebar.slider('hour', 0, 23, 17)
 filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 
 st.subheader('Map of all pickups at %s:00' % hour_to_filter)
