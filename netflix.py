@@ -10,7 +10,6 @@ DATA_URL =co.open('movies.csv', 'rU', 'latin1')
 def load_data(nrows):
     
     data=pd.read_csv(DATA_URL, nrows=nrows)
-    lowercase = lambda x: str(x).lower
     return data
 
 data_load_state =st.text('Load data...')
